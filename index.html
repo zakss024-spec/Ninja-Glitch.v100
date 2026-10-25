@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NINJA GLITCH — Command Interface</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast"></div>
+
+<section id="intro" class="screen">
+  <div class="intro-art"><img src="assets/images/blackhole.jpg"><div class="scan-ring"></div></div>
+  <div class="intro-ninja"><img src="assets/images/ninja-core.png"></div>
+  <div class="intro-copy"><span>NEURAL COMMAND SYSTEM</span><h1>NINJA<span>GLITCH</span></h1><p>INITIALIZING SECURE INTERFACE</p></div>
+  <div class="load-wrap"><div class="load-top"><b>SYSTEM BOOT</b><b id="introPct">0%</b></div><div class="loadbar"><i id="introBar"></i></div></div>
+  <button class="ghost-btn" id="skipIntro">SKIP INTRO <span>→</span></button>
+</section>
+
+<section id="login" class="screen hidden">
+  <div class="login-bg"></div>
+  <div class="auth-card">
+    <div class="brand-mini"><strong>NG</strong><span>NINJA GLITCH</span></div>
+    <div class="auth-icon">◈</div><div class="eyebrow">SECURE ACCESS</div><h1>COMMAND LOGIN</h1><p class="sub">Enter your local operator credentials.</p>
+    <label>USERNAME<input id="user" autocomplete="off" placeholder="Ninja67"></label>
+    <label>PASSWORD<input id="pass" type="password" placeholder="••••••••"></label>
+    <button class="primary" id="loginBtn">AUTHENTICATE <span>↗</span></button>
+    <div id="loginMsg"></div><small>LOCAL CLIENT • ENCRYPTED SESSION UI</small>
+  </div>
+</section>
+
+<section id="finger" class="screen hidden">
+  <div class="auth-card fingerprint-card">
+    <div class="eyebrow">BIOMETRIC GATE</div><h1>VERIFY IDENTITY</h1><p class="sub">Tap the scanner to start a visual authentication sequence.</p>
+    <button class="fingerprint" id="fingerBtn"><span>⌁</span><i></i></button>
+    <div id="fingerText">READY TO SCAN</div>
+    <div class="loadbar"><i id="fingerBar"></i></div>
+  </div>
+</section>
+
+<section id="loading" class="screen hidden">
+  <div class="loader-space"><img class="bh" src="assets/images/blackhole.jpg"><img class="nin" src="assets/images/ninja-core.png"><div class="orbit"></div></div>
+  <div class="loading-copy"><span>NINJA CORE</span><h1>ENTERING THE GRID</h1><p id="loadText">Synchronizing interface...</p></div>
+  <div class="load-wrap"><div class="load-top"><b>CORE LOAD</b><b id="loadPct">0%</b></div><div class="loadbar"><i id="loadBar"></i></div></div>
+  <button class="ghost-btn" id="skipLoad">SKIP SEQUENCE <span>→</span></button>
+</section>
+
+<main id="app" class="hidden">
+<header class="topbar">
+  <div class="brand"><div class="brand-mark">NG</div><div><span>NINJA GLITCH</span><h1 id="pageTitle">COMMAND CENTER</h1></div></div>
+  <div class="top-actions"><div class="live"><i></i> LOCAL CORE</div><button id="logout">EXIT</button></div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-ninja"><img src="assets/images/ninja-core.png"></div>
+  <div class="hero-copy"><div class="eyebrow">OPERATOR CONSOLE / 01</div><h2>WELCOME BACK,<br><span>NINJA67</span></h2><p>Monitor modules, run safe simulations and review local activity.</p>
+  <div class="hero-actions"><button class="primary" data-open="bug">OPEN BUG LAB <span>↗</span></button><button class="soft" data-open="terminal">TERMINAL</button></div></div>
+  <div class="hero-stats"><div><small>CORE</small><b>98.7%</b></div><div><small>MODULES</small><b>18</b></div><div><small>SESSION</small><b>LOCAL</b></div></div>
+</section>
+
+<section class="quick-grid">
+  <article class="metric"><span>SYSTEM STATUS</span><b>ONLINE</b><small>All local services operational</small><i class="meter"><em style="width:96%"></em></i></article>
+  <article class="metric"><span>SECURITY</span><b>ACTIVE</b><small>Visual protection layer enabled</small><i class="meter"><em style="width:88%"></em></i></article>
+  <article class="metric"><span>ACTIVITY</span><b id="activityCount">024</b><small>Events recorded this session</small><i class="meter"><em style="width:64%"></em></i></article>
+</section>
+
+<section id="panelArea"></section>
+
+<nav class="bottom-nav">
+  <button data-page="home" class="active"><span>⌂</span>HOME</button>
+  <button data-page="tools"><span>◈</span>TOOLS</button>
+  <button data-page="labs"><span>⌁</span>LABS</button>
+  <button data-page="activity"><span>◷</span>ACTIVITY</button>
+  <button data-page="settings"><span>⚙</span>SETTINGS</button>
+</nav>
+</main>
+<script src="app.js"></script>
+</body></html>
